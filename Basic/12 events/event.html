@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color:  white;">
+    <h2>Images</h2>
+    <div>
+        <ul id="img">
+           <li><img src="https://images.pexels.com/photos/9064442/pexels-photo-9064442.jpeg" height="200px" width="200px" id="sea" alt=""></li>
+           <li><img src="https://images.pexels.com/photos/18868883/pexels-photo-18868883/free-photo-of-lamp-on-an-electricity-pole.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" height="200px" width="200px" id="bulb" alt=""></li>
+           <li><img src="https://images.pexels.com/photos/26989067/pexels-photo-26989067/free-photo-of-her-kosulda-balik.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" height="200px" width="200px" id="man" alt=""></li>
+           <li><img src="https://images.pexels.com/photos/26555819/pexels-photo-26555819/free-photo-of-a-dog-is-sitting-in-the-grass-in-the-woods.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"  height="200px" width="200px" id="fox" alt=""></li>
+           <li><img src="https://images.pexels.com/photos/17129151/pexels-photo-17129151/free-photo-of-berries-on-trees.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" height="200px" width="200px" id="beery" alt=""></li>
+           <li><img src="https://images.pexels.com/photos/27243744/pexels-photo-27243744/free-photo-of-a-red-and-yellow-flower-in-the-grass.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" height="200px" width="200px" id="flower" alt=""></li>
+         <li><a style="color: white;" href="https://google.com" id="google">Google </a></li>
+        </ul>
+    </div>
+
+</body>
+<script>
+//    document.getElementById('man').onclick=function(){
+//     alert('man clicked')
+//    } 
+
+//good apporach
+// document.getElementById('man').addEventListener('click', function(e){             
+//     alert("man clicked")
+// },false)
+
+//type,timestamp,defaultPrevented
+//target,toElement,srcElement,currentTarget
+//position related clientx,y screenx,y
+//altkey shiftkey,keycode
+
+
+// event propogation
+  //1> event bubbling 2> event capcuring
+ 
+  //1> event bubling-> flow inner to outer(bottom to top)
+//   document.getElementById('img').addEventListener('click',function(){
+//     console.log("click inside img");
+//   },false)
+
+//   document.getElementById('man').addEventListener('click',function(e){
+//    console.log("man clicked");
+//    e.stopPropagation()
+//   },false)
+
+//2> campuring => flow top to bottom(outer to inner)
+// document.getElementById('sea').addEventListener('click',(e)=>{  
+//     return console.log('sea clicked'); 
+// },true)
+
+
+document.getElementById('google').addEventListener('click',function(e){
+    e.preventDefault()
+})
+
+
+
+// remove img
+
+ document.querySelector('#img').addEventListener('click',function(e){
+     console.log(e.target.tagName);
+
+       if(e.target.tagName==='IMG'){
+        console.log(e.target.id);
+        let removeit=e.target.parentNode
+        removeit.remove()
+
+       }
+
+    //  let removeit=e.target.parentNode
+    //  removeit.remove()
+ })
+</script>
+</html>

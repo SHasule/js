@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>best js series</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    
+</body>
+<script>
+    // const name=function(){
+    //     console.log("javascript",Date.now());
+    // }
+    // const stopname=  setInterval(name,1000)
+
+    document.getElementById('start').addEventListener('click',function(){
+    const name=function(){
+        document.body.style.backgroundColor="red"
+        console.log("javascript",Date.now());
+    }
+    const stopname=  setInterval(name,1000)
+
+
+  document.getElementById("stop").addEventListener('click',function(){
+    document.body.style.backgroundColor="green"
+    clearInterval(stopname)
+  })
+  
+
+
+  })
+</script>
+</html>

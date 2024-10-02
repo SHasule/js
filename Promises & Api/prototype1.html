@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+ 
+const obj1={
+    name:"kiran",
+    id:33,
+    getname:function(){
+        return console.log("this is obj1 one");
+
+    },
+    getroll:function(){
+        return this.id
+    }
+    
+}
+  const obj2={
+    id:2,
+    name:"ishwar",
+    __proto__:obj1
+  }
+  const obj3={
+    class:"bca",
+    __proto__:obj2
+  }
+  console.log(obj3);
+//  console.log(obj1)
+
+
+//set prototype to array
+
+// Array.prototype.s=function(){
+//     return this;
+// }
+// const cities=['pune','mumbai']
+// console.log(cities.s());
+
+</script>
+</html>
+
+

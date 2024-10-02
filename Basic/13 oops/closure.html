@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <button id="green">green</button>
+    <button id="red">red</button>
+</body>
+<script>
+    // function user(){
+    //     let name="pooja"
+    //     function userage(){
+    //         let age="20"
+    //         console.log("inner userage",name);
+    //     }
+    //     userage()
+    //     function userWeight(){
+    //         let weight='30'
+    //        // console.log( "inner userweight ",age);
+    //         console.log( "inner userweight",weight);
+    //     }
+    //     userWeight()
+        
+    // }
+    // user()
+
+//      function changegreen(){
+//           document.body.style.backgroundColor="green"
+//      }
+// document.getElementById('green').addEventListener('click',changegreen)
+// document.getElementById('red').addEventListener('click',function(){
+//     document.body.style.backgroundColor="red"
+// })
+
+</script>
+<script>
+
+    function clickhandler (color){
+    //   document.body.style.backgroundColor= `${color}`
+    return function(){
+        document.body.style.backgroundColor=`${color}`
+    }
+}
+   document.getElementById('red').onclick=clickhandler('red') 
+  document.getElementById('green').onclick=clickhandler('green')
+</script>
+
+</html>

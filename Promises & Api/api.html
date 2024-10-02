@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>API calling in js</h3>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>id</th>
+                <th>website</th>
+                <th>username</th>
+                <th>phone</th>
+
+            </tr>
+        </thead>
+        <tbody id="userdata"></tbody>
+    </table>
+</body>
+<script>
+   
+ async function callApi (){
+    let result=await fetch("https://jsonplaceholder.typicode.com/users");
+    result= await result.json()
+    console.log(result);
+
+    document.getElementById('userdata').innerHTML=result
+    .map((user)=>
+         `<tr>
+            <td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.id}</td>
+            <td>${user.website}</td>
+            <td>${user.username}</td>
+            <td>${user.phone}</td>
+
+           
+            </tr>`   
+     )
+  }
+  callApi()
+</script>
+</html>

@@ -1,0 +1,32 @@
+*{
+  
+  background-color: rgb(208, 231, 223);
+}
+body{
+  min-width: 100vw;
+  height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#container{
+  border: 0.76px solid black;
+  padding:20px;
+  height: 50%;
+  
+}
+#input-city{
+  padding: 5px;
+  margin-right:5px;
+  border: 0.70px solid rgb(36, 35, 35);
+}
+
+#search-btn{
+  padding: 5px;
+  border: 0.70px solid rgb(36, 35, 35);
+  cursor: pointer;
+  color: rgb(56, 54, 54);
+}
+#search-btn:hover{
+ background-color: rgb(138, 224, 195);
+}

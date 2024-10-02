@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" placeholder="enter remove position" id="removenum">
+  <button onclick="remove()">remove element</button>
+</body>
+ <script>
+  //  let data=[32,45,53,2,44,23,55,43]
+  //  let position=2;
+      
+  //  for(let i=position;i<=data.length-1;i++){
+  //     // console.log(data[i]);
+  //   data[i]=data[i+1]
+  //  }
+  //  data.length=data.length-1
+  //  console.log(data);
+
+function remove(){
+  let data=[9,32,3,2,21,98,78]
+  let position=document.getElementById("removenum").value;
+  position=parseInt(position)
+   for(let i=position;i<data.length-1;i++){
+    
+    data[i]=data[i+1]
+   }
+   data.length=data.length-1
+   console.log(data);
+   
+}
+remove()
+ </script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+  <input type="text" id="element">
+  <button onclick="getelement()">get element</button>
+  
+</body>
+<script>
+   let data=[1,3,4,0,32,11,44,33,22]
+  for(let i=0;i<data.length;i++)
+ {
+ // console.log(`${i} value is ${data[i]}`);
+  // document.write(`${i}`)
+ } 
+
+//  let x=5;
+//  console.log(data[x]); 
+
+function getelement(){
+ let el=document.getElementById("element").value
+  if(el<data.length && typeof parseInt(el)==="number" && el>=0){
+    alert(data[el])
+  }
+  else{
+    alert("enter valid value")
+  }
+
+}
+ 
+</script>
+</html>

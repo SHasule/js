@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="myclass">1</div>
+    <div class="myclass">2</div>
+    <div id="mydiv" class="classdiv" ><span style="display:none;">test span</span>3</div>
+    <p>4</p>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+</body>
+<script>
+   const element=document.getElementsByClassName('myclass');
+   for(let i=0;i<element.length;i++){
+    console.log(element[i].textContent);
+    // document.body.style.backgroundColor="red";
+    // document.body.style.color="white";
+
+   }
+   document.body.style.backgroundColor="red";
+   document.body.style.color="white";
+
+
+//    const id_selector=document.getElementById('mydiv');
+//    console.log(id_selector.body.style.color="blue");
+const tagname=document.getElementsByTagName('p');
+for(i=0;i<tagname.length;i++){
+    console.log(tagname[i].textContent);
+   
+}
+
+</script>
+</html> 

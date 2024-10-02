@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h4 id="time"></h4>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+  </div>
+</body>
+<script>
+
+ const stop=document.getElementById("stop");
+ const strat=document.getElementById("start");
+  function showtime(){
+    const currenttime=new Date();
+    const time=`${currenttime.getHours()}:${currenttime.getMinutes()}:${currenttime.getSeconds()}`
+  // console.log(time);
+   document.getElementById("time").innerText=time  
+  }
+
+  
+   let currtime= setInterval(showtime,1000)
+   start.addEventListener("click",()=>{
+  //let currtime= setInterval(showtime,1000)
+   })
+  stop.addEventListener("click",()=>{
+    clearInterval(currtime)
+  })
+  
+   
+
+
+</script>
+</html>

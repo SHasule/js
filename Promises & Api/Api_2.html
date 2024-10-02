@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>call api</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>website</th>
+            </tr>
+        </thead>
+        <tbody id="apiClass"></tbody>
+    </table>
+</body>
+<script>
+    async function api2() {
+        let show = await fetch("https://jsonplaceholder.typicode.com/users");
+        show = await show.json()
+        console.log(show);
+        document.getElementById('apiClass').innerHTML = show
+            .map((userdata) =>
+                `<tr>
+            <td>${userdata.name}</td>
+            <td>${userdata.email}</td>
+            <td>${userdata.phone}</td>
+            <td>${userdata.website}</td>
+            <tr>`
+            )
+    }
+    api2()
+</script>
+
+</html>
